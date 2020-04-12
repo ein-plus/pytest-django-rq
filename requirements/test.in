@@ -1,0 +1,4 @@
+-c prod.txt
+
+pytest
+django_rq
