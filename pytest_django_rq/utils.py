@@ -31,12 +31,12 @@ def extract_args(
 ) -> Tuple[str]:
     """Return a tuple with arguments passed through.
 
-    >>> def f(host='locahost', port=8888, retry=3):
+    >>> def f(host='localhost', port=8888, retry=3):
     ...    pass
     >>> sig = inspect.signature(f)
     >>> ba = sig.bind(port=8000)
     >>> extract_args(sig, ba, ('host', 'port'))
-    ('localhost', 8888)
+    ('localhost', 8000)
     """
     return tuple(
         ba.arguments.get(name, sig.parameters[name].default) for name in key_params
