@@ -4,6 +4,8 @@
 A pytest plugin to help writing unit test for django-rq.
 
 <p align="center">
+<a href="https://pypi.python.org/pypi/pytest-django-rq/"><img alt="python" src="https://img.shields.io/pypi/pyversions/pytest-django-rq.svg"></a>
+<a href="https://pypi.python.org/pypi/pytest-django-rq/"><img alt="version" src="http://img.shields.io/pypi/v/pytest-django-rq.svg"></a>
 <a href="https://github.com/ein-plus/pytest-django-rq/actions?query=workflow%3Abuild"><img alt="build" src="https://github.com/ein-plus/pytest-django-rq/workflows/build/badge.svg"></a>
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 </p>
