@@ -39,7 +39,7 @@ build/dev-req-installed: $(DEV_REQ)
 dev: build/dev-req-installed
 
 test: build/test-req-installed
-	pytest --log-level=DEBUG
+	pytest
 
 release:
 	python setup.py sdist bdist_wheel upload

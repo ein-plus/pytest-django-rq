@@ -3,3 +3,4 @@
 pytest
 django_rq
 pytest-django
+pytest-cov
