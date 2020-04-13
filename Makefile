@@ -28,10 +28,11 @@ reqs: $(PROD_REQ) $(TEST_REQ) $(DEV_REQ)
 
 build/test-req-installed: $(TEST_REQ)
 	pip install -r $<
+	pip install -e .
 	touch $@
 
-build/dev-req-installed: reqs
-	pip install -r $(PROD_REQ) $(TEST_REQ) $(DEV_REQ)
+build/dev-req-installed: $(DEV_REQ)
+	pip install -r $<
 	pip install -e .
 	touch $@
 
