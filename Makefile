@@ -4,7 +4,7 @@ TEST_REQ := requirements/test.txt
 DEV_REQ := requirements/dev.txt
 SETUP_PY := setup.py
 
-.PHONY: all reqs test dev-req clean release
+.PHONY: all reqs test dev clean release
 
 all: reqs test
 
@@ -30,12 +30,12 @@ build/test-req-installed: $(TEST_REQ)
 	pip install -r $<
 	touch $@
 
-build/dev-req-installed: $(DEV_REQ)
-	pip install -r $<
+build/dev-req-installed: reqs
+	pip install -r $(PROD_REQ) $(TEST_REQ) $(DEV_REQ)
 	pip install -e .
 	touch $@
 
-dev-req: build/dev-req-installed
+dev: build/dev-req-installed
 
 test: build/test-req-installed
 	pytest --log-level=DEBUG

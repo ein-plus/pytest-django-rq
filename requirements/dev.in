@@ -1,4 +1,4 @@
--c test.txt
+-r test.txt
 
 IPython
 twine
