@@ -39,6 +39,7 @@ dev: build/dev-req-installed
 
 test: build/test-req-installed
 	pytest --log-level=DEBUG
+	pytest --doctest-modules pytest_django_rq
 
 release:
 	python setup.py sdist bdist_wheel upload
