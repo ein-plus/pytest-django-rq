@@ -15,7 +15,7 @@ cffi==1.14.0              # via cryptography
 chardet==3.0.4            # via requests
 click==7.1.1              # via -r test.txt, pip-tools, rq
 coverage==5.1             # via -r test.txt, pytest-cov
-cryptography==2.9.2       # via secretstorage
+cryptography==3.2         # via secretstorage
 decorator==4.4.2          # via ipython, traitlets
 django-rq==2.3.1          # via -r test.txt
 django==3.0.7             # via -r test.txt, django-rq
